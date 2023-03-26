@@ -8,6 +8,8 @@
 
 :root {
   font-size: 62.5%;
+  
+  --bg-size: 400%;
 
   --color-gradient: linear-gradient(
     90deg,
@@ -67,7 +69,7 @@ nav {
   margin-top: 5rem;
   font-weight: 900;
   line-height: 200%;
-  --bg-size: 400%;
+  background-size: var(--bg-size);
   background: var(--color-gradient) 0 0 / var(--bg-size) 100%;
   color: transparent;
   background-clip: text;
