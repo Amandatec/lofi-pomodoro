@@ -8,17 +8,25 @@
 
 :root {
   font-size: 62.5%;
-  
+
   --bg-size: 400%;
 
-  --color-gradient: linear-gradient(
+  --color-gradient-static: linear-gradient(
+    90deg,
+    hsl(330, 86%, 46%),
+    hsl(271, 97%, 48%),
+    hsl(0, 0%, 100%),
+    hsl(330, 86%, 46%)
+  );
+
+  --color-gradient-animation: linear-gradient(
     90deg,
     hsl(0, 0%, 100%),
     hsl(330, 86%, 46%),
     hsl(271, 97%, 48%),
     hsl(330, 86%, 46%),
     hsl(0, 0%, 100%)
-  )
+  );
 }
 
 body {
@@ -57,11 +65,17 @@ nav {
 
 .logo {
   font-size: 2rem;
-  background:var(--color-gradient);
+  background: var(--color-gradient-static);
   font-weight: bold;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+.social {
+  display: flex;
+  gap: 0.8rem;
+  cursor: pointer;
 }
 
 .title {
@@ -70,7 +84,7 @@ nav {
   font-weight: 900;
   line-height: 200%;
   background-size: var(--bg-size);
-  background: var(--color-gradient) 0 0 / var(--bg-size) 100%;
+  background: var(--color-gradient-animation) 0 0 / var(--bg-size) 100%;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -115,7 +129,7 @@ main {
   width: 100%;
   max-height: 30rem;
   object-fit: cover;
-  transition: transform .8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
 
 .card img:hover {
@@ -123,5 +137,21 @@ main {
   cursor: pointer;
   width: 30rem;
   height: 30rem;
-   box-shadow: 0px 0px 30px 20px hsl(330, 86%, 46%), 0px 0px 0px 10px inset;
+  box-shadow: 0px 0px 30px 20px hsl(330, 86%, 46%), 0px 0px 0px 10px inset;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  gap: 0.5rem;
+}
+
+footer span {
+  background: var(--color-gradient-static);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
