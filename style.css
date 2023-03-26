@@ -11,10 +11,32 @@
 }
 
 body {
+  
   font-family: 'Roboto', sans-serif;
   background-color: #000;
   color: #fff;
 }
+
+.title {
+  font-size: 6rem;
+  margin-top: 5rem;
+  font-weight: 900;
+  line-height: 200%;
+  --bg-size: 400%;
+  background: linear-gradient(90deg, hsl(0, 0%, 100%), hsl(330, 86%, 46%), hsl(271, 97%, 48%), hsl(330, 86%, 46%), hsl(0, 0%, 100%)) 0 0 / var(--bg-size)100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: move-bg 8s infinite linear;
+}
+
+@keyframes move-bg{
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
 
 img {
   width: 25.6rem;
@@ -67,7 +89,13 @@ main {
 
 .card {
   height: 30rem;
-  width: 30rem;
+  width: 30rem; 
+  transition: transform .5s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .card img {
