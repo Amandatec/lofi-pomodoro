@@ -25,26 +25,6 @@ body {
   color: #fff;
 }
 
-.title {
-  font-size: 6rem;
-  margin-top: 5rem;
-  font-weight: 900;
-  line-height: 200%;
-  --bg-size: 400%;
-  background: var(--color-gradient) 0 0 / var(--bg-size) 100%;;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  animation: move-bg 8s infinite linear;
-}
-
-@keyframes move-bg {
-  to {
-    background-position: var(--bg-size) 0;
-  }
-}
-
 img {
   width: 25.6rem;
   height: 25.6rem;
@@ -71,6 +51,35 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  background:var(--color-gradient);
+  font-weight: bold;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.title {
+  font-size: 6rem;
+  margin-top: 5rem;
+  font-weight: 900;
+  line-height: 200%;
+  --bg-size: 400%;
+  background: var(--color-gradient) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  animation: move-bg 8s infinite linear;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
 }
 
 main {
